@@ -47,8 +47,12 @@ body {
   grid-gap: 3rem 4rem;
 }
 
+.features__text {
+  color: black;
+}
+
 .feature__icon {
-  font-size: 6rem;
+  font-size: 4.5rem;
 }
 
 .banner-img {
