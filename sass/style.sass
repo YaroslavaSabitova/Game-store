@@ -5,6 +5,9 @@ $color-blue-dark: #101D2C
 
 $color-gray-dark: #AAAAAA
 $color-gray-light: #F5F5F5
+
+$color-black:  #000000
+$color-white:  #ffffff
     
 
     
@@ -17,16 +20,35 @@ html
     font-size: 62.5%   // 1rem = 10px
 
 body
-    font-family: Montserrat, sans-serif
+    font-family: "Montserrat", sans-serif
     font-weight: 400
     color: $color-green-light
     line-height: 113%
     font-size: 1.6rem
+    background-color: $color-gray-light
 
 .container
     display: grid
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content)
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]
+
+.title
+    font-weight: 700
+    &-1
+        font-size: 4.5rem
+        color: $color-white
+    &-2
+        font-size: 4rem
+        color: $color-gray-light
+    &-3
+        font-size: 1.9rem
+        color: $color-green-dark
+        font-weight: 700
+        &_white
+            color: $color-gray-light
+        &_green-light
+            color: $color-green-light
+
 
 .sidebar
     background-color: $color-green-dark
@@ -46,14 +68,20 @@ body
     background-color: $color-gray-light
     grid-column: center-start / center-end
     display: grid
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr))
     grid-gap: 3rem 4rem
-    &__text
-        color: green
+    align-items: start
 
 .feature
+    display: grid
+    grid-template-columns: min-content 1fr
+    grid-gap: 1.5rem 2.5rem
     &__icon
         font-size: 4.5rem
+        grid-row: 1 / span 2
+        transform: translateY(-1.5rem)
+    &__text
+        color: $color-green-dark
 
 .banner
     &-img

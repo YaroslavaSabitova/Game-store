@@ -9,17 +9,46 @@ html {
 }
 
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #61A568;
   line-height: 113%;
   font-size: 1.6rem;
+  background-color: #F5F5F5;
 }
 
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.title {
+  font-weight: 700;
+}
+
+.title-1 {
+  font-size: 4.5rem;
+  color: #ffffff;
+}
+
+.title-2 {
+  font-size: 4rem;
+  color: #F5F5F5;
+}
+
+.title-3 {
+  font-size: 1.9rem;
+  color: #425844;
+  font-weight: 700;
+}
+
+.title-3_white {
+  color: #F5F5F5;
+}
+
+.title-3_green-light {
+  color: #61A568;
 }
 
 .sidebar {
@@ -43,16 +72,25 @@ body {
   background-color: #F5F5F5;
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   grid-gap: 3rem 4rem;
+  align-items: start;
 }
 
-.features__text {
-  color: green;
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 1.5rem 2.5rem;
 }
 
 .feature__icon {
   font-size: 4.5rem;
+  grid-row: 1 / span 2;
+  transform: translateY(-1.5rem);
+}
+
+.feature__text {
+  color: #425844;
 }
 
 .banner-img {
