@@ -110,8 +110,32 @@ body
 
 .banner
     &-img
-        background-color: $color-blue-dark
+        background: url(../img/back.png) center / cover no-repeat
         grid-column: full-start / col-end 4
+        display: grid
+        grid-template-columns: repeat(16, 1fr)
+        grid-template-rows: repeat(24, 1fr)
+        transition: .5s
+        &:hover &__img:not(:hover)
+            transform: scale(.95)
+            filter: blur(.2rem) 
+        &__img
+            transition: .5s
+            backface-visibility: hidden
+            filter: brightness(.9)
+            &:hover
+                transform: scale(1.05)
+                z-index: 20
+                filter: brightness(1.1)
+            &-1
+                width: 100%
+                grid-column: 3 / 15
+                grid-row: 3 / 12
+            &-2
+                width: 100%
+                grid-column: 5 / -1
+                grid-row: 10 / 23
+                transform: translateX(3rem)
     &-text
         background-color: $color-blue-dark
         grid-column: col-start 5 / full-end
@@ -161,10 +185,8 @@ body
             // transition: .9s
     &:active
         transform: translateY(.5rem)
-        color: $color-gray-light
+        color: $color-gray-dark
         background: $color-green-dark
-        border-radius: 1rem
-
 
 .cards
     background-color: $color-gray-light
