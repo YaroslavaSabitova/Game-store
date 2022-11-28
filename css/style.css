@@ -221,21 +221,63 @@ body {
 .btn:active {
   transform: translateY(0.5rem);
   color: #AAAAAA;
-  background: #425844;
+  background-color: #425844;
 }
 
 .cards {
+  padding: 15rem 0;
   background-color: #F5F5F5;
   grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 4rem 6rem;
+}
+
+.card {
+  background-color: #101D2C;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card__img {
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.card__title {
+  grid-column: 1 / -1;
+  background-color: #425844;
+  padding: 1.5rem 8rem;
+  text-align: center;
+  font-weight: 700;
+  width: 80%;
+  justify-self: center;
+  transform: translateY(-50%);
 }
 
 .card__icon {
-  background: red;
+  background-color: #F5F5F5;
   -webkit-background-clip: text;
   color: transparent;
   font-size: 2rem;
-  transform: translateY(-1.5rem);
   transition: .5s;
+  margin-right: 1rem;
+}
+
+.card__text {
+  font-weight: 300;
+}
+
+.card__btn {
+  grid-column: 1 / -1;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .gallery {
