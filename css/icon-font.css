@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?nzeqvf');
-  src:  url('fonts/icomoon.eot?nzeqvf#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?nzeqvf') format('truetype'),
-    url('fonts/icomoon.woff?nzeqvf') format('woff'),
-    url('fonts/icomoon.svg?nzeqvf#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?rhccqy');
+  src:  url('fonts/icomoon.eot?rhccqy#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?rhccqy') format('truetype'),
+    url('fonts/icomoon.woff?rhccqy') format('woff'),
+    url('fonts/icomoon.svg?rhccqy#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -31,15 +31,27 @@
 .icon-cart:before {
   content: "\e93a";
 }
+.icon-credit-card:before {
+  content: "\e93f";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-display:before {
+  content: "\e956";
+}
 .icon-bubbles2:before {
   content: "\e96d";
 }
-.icon-cog:before {
-  content: "\e994";
+.icon-users:before {
+  content: "\e972";
 }
 .icon-trophy:before {
   content: "\e99e";
 }
 .icon-earth:before {
   content: "\e9ca";
+}
+.icon-steam2:before {
+  content: "\eaad";
 }

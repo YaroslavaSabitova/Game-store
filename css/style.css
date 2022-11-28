@@ -45,9 +45,10 @@ body {
 }
 
 .title-3 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #425844;
+  transition: .7s;
 }
 
 .title-3_white {
@@ -67,8 +68,8 @@ body {
 }
 
 .title-4:hover {
-  transform: scale(1.1);
-  text-shadow: #F5F5F5 3px 3px 7px;
+  transform: scale(1.07);
+  text-shadow: #61A568 3px 3px 7px;
 }
 
 .sidebar {
@@ -114,10 +115,15 @@ body {
 }
 
 .feature:hover .feature__icon {
-  transform: scale(1.11);
+  transform: scale(1.07);
   background: #425844;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.feature:hover .feature__title {
+  transform: scale(1.07);
+  text-shadow: #61A568 3px 3px 7px;
 }
 
 .feature__text {
@@ -145,7 +151,7 @@ body {
 }
 
 .banner-img__img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   z-index: 20;
   filter: brightness(1.1);
 }
@@ -221,6 +227,15 @@ body {
 .cards {
   background-color: #F5F5F5;
   grid-column: center-start / center-end;
+}
+
+.card__icon {
+  background: red;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  transform: translateY(-1.5rem);
+  transition: .5s;
 }
 
 .gallery {
