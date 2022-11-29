@@ -9,7 +9,8 @@ $color-gray-light: #F5F5F5
 $color-black: #000000
 $color-white: #ffffff
 
-$text-shadow: $color-green-light 3px 3px 7px
+$text-shadow: $color-green-light 2px 2px 5px
+$box-shadow: 3px 3px 4px #7e7e7e80
 
 *, ::after, ::before
     margin: 0
@@ -122,7 +123,7 @@ body
         transition: .5s
         &:hover &__img:not(:hover)
             transform: scale(.95)
-            filter: blur(.2rem) 
+            filter: blur(.2rem)
         &__img
             transition: .5s
             backface-visibility: hidden
@@ -204,10 +205,13 @@ body
     background-color: $color-blue-dark
     display: grid
     grid-template-columns: repeat(2, 1fr)
-    // grid-row-gap: 4.5rem
+    box-shadow: $box-shadow
     &__img
         width: 100%
         grid-column: 1 / -1
+        transition: .5s
+    &:hover &__img
+        filter: brightness(1.5) saturate(70%)
     &__title
         grid-column: 1 / -1
         background-color: $color-green-dark
@@ -217,6 +221,9 @@ body
         width: 80%
         justify-self: center
         transform: translateY(-50%)
+        transition: .5s
+    &:hover &__title
+        background-color: $color-green-light
     &__icon
         background-color: $color-gray-light
         -webkit-background-clip: text
@@ -224,10 +231,23 @@ body
         font-size: 2rem
         transition: .5s
         margin-right: 1rem
+    &:hover &__icon
+        background-color: $color-green-light
     &__text
         font-weight: 300
     &__btn
         grid-column: 1 / -1
+    &:hover &__btn
+        cursor: pointer
+        background: $color-green-light
+        &::after
+            transform: translateX(500px) skewX(-15deg)
+            transition: .9s
+        &:active
+            transform: translateY(.5rem)
+            color: $color-gray-dark
+            background-color: $color-green-dark
+
 
 .content
     display: flex
@@ -235,7 +255,6 @@ body
     align-items: center
     padding: 0 1.5rem
     margin-bottom: 3rem
-    
 
 .gallery
     background-color: $color-blue-dark

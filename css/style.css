@@ -69,7 +69,7 @@ body {
 
 .title-4:hover {
   transform: scale(1.07);
-  text-shadow: #61A568 3px 3px 7px;
+  text-shadow: #61A568 2px 2px 5px;
 }
 
 .sidebar {
@@ -123,7 +123,7 @@ body {
 
 .feature:hover .feature__title {
   transform: scale(1.07);
-  text-shadow: #61A568 3px 3px 7px;
+  text-shadow: #61A568 2px 2px 5px;
 }
 
 .feature__text {
@@ -237,11 +237,17 @@ body {
   background-color: #101D2C;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  box-shadow: 3px 3px 4px #7e7e7e80;
 }
 
 .card__img {
   width: 100%;
   grid-column: 1 / -1;
+  transition: .5s;
+}
+
+.card:hover .card__img {
+  filter: brightness(1.5) saturate(70%);
 }
 
 .card__title {
@@ -253,6 +259,11 @@ body {
   width: 80%;
   justify-self: center;
   transform: translateY(-50%);
+  transition: .5s;
+}
+
+.card:hover .card__title {
+  background-color: #61A568;
 }
 
 .card__icon {
@@ -264,12 +275,32 @@ body {
   margin-right: 1rem;
 }
 
+.card:hover .card__icon {
+  background-color: #61A568;
+}
+
 .card__text {
   font-weight: 300;
 }
 
 .card__btn {
   grid-column: 1 / -1;
+}
+
+.card:hover .card__btn {
+  cursor: pointer;
+  background: #61A568;
+}
+
+.card:hover .card__btn::after {
+  transform: translateX(500px) skewX(-15deg);
+  transition: .9s;
+}
+
+.card:hover .card__btn:active {
+  transform: translateY(0.5rem);
+  color: #AAAAAA;
+  background-color: #425844;
 }
 
 .content {
