@@ -78,6 +78,119 @@ body {
   grid-row: 1 / -1;
 }
 
+.sidebar__toggle {
+  display: none;
+}
+
+.sidebar__button {
+  position: fixed;
+  top: 2rem;
+  left: 1.5rem;
+  z-index: 27;
+  cursor: pointer;
+}
+
+.sidebar__nav {
+  position: fixed;
+  z-index: 26;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0 5rem;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 0;
+}
+
+.sidebar__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 27;
+}
+
+.sidebar__item {
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.sidebar__link:link, .sidebar__link:visited {
+  color: #F5F5F5;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: .3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, transparent 50%, #61A568 50%);
+  background-size: 220%;
+  padding: .5rem .5rem;
+  transition: all .7s;
+  display: inline-block;
+}
+
+.sidebar__link:hover, .sidebar__link:active {
+  background-position: 100%;
+  color: #F5F5F5;
+  transform: translateX(1rem);
+}
+
+.sidebar__toggle:checked ~ .sidebar__nav {
+  background-color: #425844;
+  position: fixed;
+  opacity: 1;
+  width: 100%;
+}
+
+.sidebar__icon {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.sidebar__icon, .sidebar__icon::before, .sidebar__icon::after {
+  width: 4.5rem;
+  height: .3rem;
+  background: #F5F5F5;
+  display: inline-block;
+}
+
+.sidebar__icon::before, .sidebar__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all .3s;
+}
+
+.sidebar__icon::before {
+  top: -.8rem;
+  transform: translateY(-0.5rem);
+}
+
+.sidebar__icon::after {
+  top: .8rem;
+  transform: translateY(0.5rem);
+}
+
+.sidebar__button:hover .sidebar__icon::before {
+  top: -1rem;
+}
+
+.sidebar__button:hover .sidebar__icon::after {
+  top: 1rem;
+}
+
+.sidebar__toggle:checked + .sidebar__button .sidebar__icon {
+  background: transparent;
+}
+
+.sidebar__toggle:checked + .sidebar__button .sidebar__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.sidebar__toggle:checked + .sidebar__button .sidebar__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
 .header {
   background-color: #101D2C;
   grid-column: full-start / col-end 6;
@@ -459,7 +572,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #F5F5F5;
-  font-weight: 300;
+  font-weight: 500;
   transition: .5s;
   position: relative;
   z-index: 1;
@@ -467,7 +580,7 @@ body {
 
 .nav__link::after {
   content: "";
-  background: #425844;
+  background: #61A568;
   position: absolute;
   top: -7px;
   right: -1rem;
