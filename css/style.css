@@ -49,7 +49,7 @@ body {
 }
 
 .title-3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 700;
   color: #425844;
   transition: .7s;
@@ -61,6 +61,7 @@ body {
 
 .title-3_green-light {
   color: #61A568;
+  text-transform: uppercase;
 }
 
 .title-4 {
@@ -72,8 +73,7 @@ body {
 }
 
 .title-4:hover {
-  transform: scale(1.07);
-  text-shadow: #61A568 2px 2px 5px;
+  text-shadow: 4px 4px 5px #61A568;
 }
 
 .sidebar {
@@ -196,7 +196,6 @@ body {
 }
 
 .header {
-  background-color: #101D2C;
   grid-column: full-start / col-end 6;
   padding: 5rem 6rem;
   display: flex;
@@ -240,6 +239,29 @@ body {
 .gamers {
   background-color: #101D2C;
   grid-column: col-start 7 / full-end;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-gap: 4rem 2rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.gamers__title {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.gamers__img {
+  width: 7rem;
+}
+
+.gamers__text {
+  align-self: center;
+}
+
+.gamers__score {
+  font-weight: 300;
+  color: #AAAAAA;
 }
 
 .features {
@@ -277,7 +299,7 @@ body {
 
 .feature:hover .feature__title {
   transform: scale(1.07);
-  text-shadow: #61A568 2px 2px 5px;
+  text-shadow: 4px 4px 5px #61A568;
 }
 
 .feature__text {
@@ -589,11 +611,11 @@ body {
 }
 
 .logo:hover i {
-  text-shadow: #61A568 2px 2px 5px;
+  text-shadow: 4px 4px 5px #61A568;
 }
 
 .logo:hover p {
-  text-shadow: #61A568 2px 2px 5px;
+  text-shadow: 4px 4px 5px #61A568;
 }
 
 .nav__list {
