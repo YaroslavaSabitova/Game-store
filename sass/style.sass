@@ -11,6 +11,7 @@ $color-white: #ffffff
 
 $text-shadow: 4px 4px 5px $color-green-light
 $box-shadow: 3px 3px 4px $color-gray-dark
+$box-shadow-dark: 0 0 7px 1px $color-black
 $img-shadow: 0 0 7px 1px $color-gray-dark
 
 *, ::after, ::before
@@ -63,6 +64,7 @@ body
         &_green-light
             color: $color-green-light
             text-transform: uppercase
+        
     &-4
         font-size: 1.7rem
         font-weight: 300
@@ -189,6 +191,9 @@ body
         img
             height: 2.5rem
             filter: brightness(70%)
+            transition: .5s
+            &:hover
+                filter: brightness(100%)
     &__logo
         margin: 0 auto
 
@@ -203,13 +208,27 @@ body
     &__title
         grid-column: 1 / -1
         justify-self: center
+        transition: .7s
+        &:hover
+            text-shadow: $text-shadow
     &__img
         width: 7rem
+        transition: .7s
+        &:hover
+            transform: scale(1.1)
+            filter: brightness(1.5) saturate(70%)
     &__text
         align-self: center
     &__score
         font-weight: 300
         color: $color-gray-dark
+        transition: .7s
+
+.gamers__text:hover h3
+    color: $color-green-light
+
+.gamers__text:hover p
+    font-weight: 500
 
 .features
     padding: 15rem 0
@@ -253,15 +272,15 @@ body
         transition: .5s
         &:hover &__img:not(:hover)
             transform: scale(.95)
-            filter: blur(.2rem)
+            filter: blur(.2rem) 
         &__img
             transition: .5s
             backface-visibility: hidden
-            filter: brightness(.9)
+            filter: brightness(.9) saturate(70%)
             &:hover
                 transform: scale(1.03)
                 z-index: 20
-                filter: brightness(1.1)
+                filter: brightness(1.1) 
             &-1
                 width: 100%
                 grid-column: 3 / 15
@@ -341,6 +360,9 @@ body
     display: grid
     grid-template-columns: repeat(2, 1fr)
     box-shadow: $box-shadow
+    transition: .5s
+    &:hover
+        box-shadow: $box-shadow-dark
     &__img
         width: 100%
         grid-column: 1 / -1

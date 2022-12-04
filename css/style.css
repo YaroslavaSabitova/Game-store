@@ -230,6 +230,11 @@ body {
 .header__img img {
   height: 2.5rem;
   filter: brightness(70%);
+  transition: .5s;
+}
+
+.header__img img:hover {
+  filter: brightness(100%);
 }
 
 .header__logo {
@@ -249,10 +254,21 @@ body {
 .gamers__title {
   grid-column: 1 / -1;
   justify-self: center;
+  transition: .7s;
+}
+
+.gamers__title:hover {
+  text-shadow: 4px 4px 5px #61A568;
 }
 
 .gamers__img {
   width: 7rem;
+  transition: .7s;
+}
+
+.gamers__img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.5) saturate(70%);
 }
 
 .gamers__text {
@@ -262,6 +278,15 @@ body {
 .gamers__score {
   font-weight: 300;
   color: #AAAAAA;
+  transition: .7s;
+}
+
+.gamers__text:hover h3 {
+  color: #61A568;
+}
+
+.gamers__text:hover p {
+  font-weight: 500;
 }
 
 .features {
@@ -323,7 +348,7 @@ body {
 .banner-img__img {
   transition: .5s;
   backface-visibility: hidden;
-  filter: brightness(0.9);
+  filter: brightness(0.9) saturate(70%);
 }
 
 .banner-img__img:hover {
@@ -418,6 +443,11 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 3px 3px 4px #AAAAAA;
+  transition: .5s;
+}
+
+.card:hover {
+  box-shadow: 0 0 7px 1px #000000;
 }
 
 .card__img {
