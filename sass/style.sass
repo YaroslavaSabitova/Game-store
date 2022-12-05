@@ -92,7 +92,7 @@ body
     &__nav
         position: fixed
         z-index: 26
-        transition: .6s cubic-bezier(0.34, 1.56, 0.64, 1)
+        transition: all .6s cubic-bezier(0.34, 1.56, 0.64, 1)
         padding: 0 0 0 5rem
         opacity: 0
         top: 0
@@ -370,7 +370,7 @@ body
     &__title
         grid-column: 1 / -1
         background-color: $color-green-dark
-        padding: 1.5rem 8rem
+        padding: 1.5rem 6rem
         text-align: center
         font-weight: 700
         width: 80%
@@ -538,10 +538,9 @@ body
 
     // Медиа запросы
 
-// Мал комп или горизонтальный планшет
+// 1 Мал комп или горизонтальный планшет
 @media (max-width: 1199px)
     .container
-        // width: 960px
         display: flex
         flex-wrap: wrap
         flex-direction: column
@@ -563,7 +562,7 @@ body
     .gamers
         padding: 6rem 0
         grid-gap: 4rem 5rem
-        grid-template-columns: min-content max-content min-content max-content min-content max-content
+        grid-template-columns: repeat(3, min-content max-content)
 
     .features
         padding: 12rem 8rem 6rem 8rem
@@ -597,34 +596,74 @@ body
         &__title
             align-self: center
 
-// Вертикальный планшет
+// 2 Вертикальный планшет
 @media (max-width: 991px)
-    .container
-        // width: 720px
-
-    html
-        font-size: 40%
+    .gamers
+        grid-gap: 4rem 2rem
 
     .cards
         padding: 8rem
-        grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr))
-        height: 70%
+        grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr))
+        height: 235rem
 
     .card
-        height: 100%
+        height: 70rem
+        &__title
+            font-size: 2rem
+            transform: translateY(-2.5rem)
+        &__content
+            justify-content: center
+        &__icon
+            font-size: 4rem
+        &__text
+            font-weight: 500
+            font-size: 2rem
+        &__btn
+            font-size: 2rem
 
-// Горизонтальный тлф
+    .footer
+        padding: 8rem 2rem
+
+    .nav__list
+        padding-left: 2rem
+
+// 3 Горизонтальный тлф
 @media (max-width: 767px)
-    .container
-        // width: 540px
-
     html
-        font-size: 30%
+        font-size: 40%
 
-    // Вертикальный тлф
+    .footer
+        padding: 8rem
+
+    .cards
+        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr))
+
+    .card
+        &__icon
+            font-size: 3rem
+        &__text
+            font-size: 1.7rem
+
+// 4 Вертикальный тлф
 @media (max-width: 575px)
-    .container
-        // width: 100%
-
     html
-        font-size: 33%
+        font-size: 35%
+
+    .gamers
+        grid-template-columns: repeat(1, min-content max-content)
+        grid-gap: 7rem 5rem
+        &__img
+            width: 9rem
+        &__text h3
+            margin-bottom: 2rem
+        &__score 
+            font-weight: 500
+
+    .cards
+        height: 232rem
+
+// 4 Маленький тлф
+
+@media (max-width: 470px)
+    .cards
+        height: 461rem
