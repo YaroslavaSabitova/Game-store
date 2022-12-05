@@ -171,8 +171,6 @@ body
     justify-content: space-around
     flex-direction: column
     background: url(../img/header-background.jpg) center / cover no-repeat
-    // display: grid
-    // grid-template-rows: 1fr min-content 10rem 1fr
     &__line
         &__text
             color: $color-gray-dark
@@ -188,8 +186,6 @@ body
                 display: block
                 background-color: $color-gray-dark
     &__img
-        // display: flex
-        // justify-content: space-evenly
         display: grid
         grid-template-columns: repeat(4, 1fr)
         justify-items: center
@@ -299,10 +295,6 @@ body
         background-color: $color-blue-dark
         grid-column: col-start 5 / full-end
         padding: 0 4vw
-        // display: flex
-        // flex-direction: column
-        // justify-content: center
-        // align-items: flex-start
         display: grid
         align-content: center
         justify-items: start
@@ -536,9 +528,11 @@ body
             z-index: -1
             transform: scaleX(1)
 
+
     // Медиа запросы
 
 // 1 Мал комп или горизонтальный планшет
+
 @media (max-width: 1199px)
     .container
         display: flex
@@ -597,6 +591,7 @@ body
             align-self: center
 
 // 2 Вертикальный планшет
+
 @media (max-width: 991px)
     .gamers
         grid-gap: 4rem 2rem
@@ -628,6 +623,7 @@ body
         padding-left: 2rem
 
 // 3 Горизонтальный тлф
+
 @media (max-width: 767px)
     html
         font-size: 40%
@@ -645,6 +641,7 @@ body
             font-size: 1.7rem
 
 // 4 Вертикальный тлф
+    
 @media (max-width: 575px)
     html
         font-size: 35%
